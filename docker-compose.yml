@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    web:
+        image: nginx:1.11.9
+        ports:
+            - 80:80
+        volumes:
+            - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+            - .:/var/www:ro
+        links:
+            - php
+    php:
+        build: docker/php
+        volumes:
+            - .:/var/www
+        user: 1000:1000
