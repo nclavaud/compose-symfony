@@ -15,3 +15,17 @@ services:
         volumes:
             - .:/var/www
         user: 1000:1000
+        environment:
+            DB_HOST: db
+            DB_PORT: 5432
+            DB_USER: symfony
+            DB_PASSWORD: symfony
+            DB_NAME: symfony
+        links:
+            - db
+    db:
+        image: postgres
+        environment:
+            POSTGRES_USER: symfony
+            POSTGRES_PASSWORD: symfony
+            POSTGRES_DB: symfony
