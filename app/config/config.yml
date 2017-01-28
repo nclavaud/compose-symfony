@@ -42,12 +42,12 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   pdo_mysql
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
+        driver:   pdo_pgsql
+        host:     "%env(DB_HOST)%"
+        port:     "%env(DB_PORT)%"
+        dbname:   "%env(DB_NAME)%"
+        user:     "%env(DB_USER)%"
+        password: "%env(DB_PASSWORD)%"
         charset:  UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
