@@ -1,9 +1,18 @@
 # compose-symfony
 
-A basic Symfony 3.2 + nginx + PHP-fpm 7.1 install, using docker-compose.
+Run Symfony3 in seconds!
 
-## Setup
+## Features
+
+This Symfony boilerplate is orchestrated with `docker-compose` and features:
+- Symfony 3.2
+- nginx
+- PHP-fpm 7.1
+- PostgreSQL 9.6
+
+## Quick start
 
 ```
 docker-compose up -d
+xdg-open http://localhost:8000
 ```
