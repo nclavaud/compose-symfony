@@ -14,5 +14,14 @@ This Symfony boilerplate is orchestrated with `docker-compose` and features:
 
 ```
 docker-compose up -d
+xdg-open http://localhost
+```
+
+### Map a different host port
+
+By default, the web server will be mapped to host port `80`, but specifying another port is as easy as:
+
+```
+EXTERNAL_PORT=8000 docker-compose up -d
 xdg-open http://localhost:8000
 ```
