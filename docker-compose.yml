@@ -4,9 +4,9 @@ services:
     web:
         image: nginx:1.11.9
         ports:
-            - 80:80
+            - 8000:80
         volumes:
-            - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
             - .:/var/www:ro
         links:
             - php
