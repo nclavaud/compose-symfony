@@ -12,9 +12,15 @@ This Symfony boilerplate is orchestrated with `docker-compose` and features:
 
 ## Quick start
 
-```
+```sh
+# boot containers
 docker-compose up -d
+
+# browse website
 xdg-open http://localhost
+
+# run Symfony console
+./console
 ```
 
 ### Map a different host port
