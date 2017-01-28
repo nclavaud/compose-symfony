@@ -14,7 +14,7 @@ services:
         build: docker/php
         volumes:
             - .:/var/www
-        user: 1000:1000
+        user: "${HOST_USER:-1000:1000}"
         environment:
             DB_HOST: db
             DB_PORT: 5432
