@@ -24,4 +24,6 @@ RUN chmod a+x /usr/local/bin/symfony
 RUN groupadd -g 1000 symfony && \
     useradd -u 1000 -g symfony symfony
 
+USER symfony
+
 WORKDIR /var/www

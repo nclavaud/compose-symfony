@@ -31,11 +31,3 @@ By default, the web server will be mapped to host port `80`, but specifying anot
 EXTERNAL_PORT=8000 docker-compose up -d
 xdg-open http://localhost:8000
 ```
-
-### Map a different host user
-
-By default, the PHP container user will be mapped to host user:group 1000:1000, but another user can be mapped with:
-
-```
-HOST_USER=$(id -u):$(id -g) docker-compose up -d
-```
