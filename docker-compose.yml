@@ -12,15 +12,17 @@ services:
         build: docker/php
         volumes:
             - .:/var/www
-        environment:
-            DB_HOST: db
-            DB_PORT: 5432
-            DB_USER: symfony
-            DB_PASSWORD: symfony
-            DB_NAME: symfony
+        env_file:
+            - php-variables.env
     db:
         image: postgres
         environment:
             POSTGRES_USER: symfony
             POSTGRES_PASSWORD: symfony
             POSTGRES_DB: symfony
+    composer:
+        image: composer/composer
+        volumes:
+            - .:/app
+        env_file:
+            - php-variables.env
