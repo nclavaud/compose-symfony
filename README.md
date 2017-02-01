@@ -4,7 +4,7 @@ Run Symfony3 in seconds!
 
 ## Features
 
-This Symfony boilerplate is orchestrated with `docker-compose` and features:
+This Symfony starter-kit is orchestrated with `docker-compose` and features:
 - Symfony 3.2
 - nginx
 - PHP-fpm 7.1
