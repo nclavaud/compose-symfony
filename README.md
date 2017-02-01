@@ -21,6 +21,9 @@ xdg-open http://localhost
 
 # run Symfony console
 ./console
+
+# connect to PostgreSQL
+./psql
 ```
 
 ### Map a different host port

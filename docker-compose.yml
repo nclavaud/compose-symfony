@@ -20,6 +20,8 @@ services:
             POSTGRES_USER: symfony
             POSTGRES_PASSWORD: symfony
             POSTGRES_DB: symfony
+            # default database user name for psql client
+            PGUSER: symfony
     composer:
         image: composer/composer
         volumes:
