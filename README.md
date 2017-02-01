@@ -24,6 +24,9 @@ xdg-open http://localhost
 
 # connect to PostgreSQL
 ./psql
+
+# watch emails sent in MailCatcher
+xdg-open http://localhost:81
 ```
 
 ### Map a different host port
@@ -33,4 +36,12 @@ By default, the web server will be mapped to host port `80`, but specifying anot
 ```
 EXTERNAL_PORT=8000 docker-compose up -d
 xdg-open http://localhost:8000
+```
+
+### Map a different host port for MailCatcher
+
+By default, MailCatcher web interface will be mapped to host port `81`. Change with:
+```
+EXTERNAL_MAILCATCHER_PORT=8001 docker-compose up -d
+xdg-open http://localhost:8001
 ```

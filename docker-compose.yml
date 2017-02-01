@@ -28,3 +28,9 @@ services:
             - .:/app
         env_file:
             - php-variables.env
+    mailcatcher:
+        image: tophfr/mailcatcher:latest
+        ports:
+            - "${EXTERNAL_MAILCATCHER_PORT:-81}:80"
+        expose:
+            - "25"
