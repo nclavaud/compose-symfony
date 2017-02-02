@@ -12,8 +12,15 @@ services:
         build: docker/php
         volumes:
             - .:/var/www
-        env_file:
-            - php-variables.env
+        environment:
+            DB_HOST: db
+            DB_PORT: 5432
+            DB_USER: symfony
+            DB_PASSWORD: symfony
+            DB_NAME: symfony
+            MAILER_HOST: mailcatcher
+            MAILER_USER: ''
+            MAILER_PASSWORD: ''
     db:
         image: postgres
         environment:
@@ -22,12 +29,6 @@ services:
             POSTGRES_DB: symfony
             # default database user name for psql client
             PGUSER: symfony
-    composer:
-        image: composer/composer
-        volumes:
-            - .:/app
-        env_file:
-            - php-variables.env
     mailcatcher:
         image: tophfr/mailcatcher:latest
         ports:
