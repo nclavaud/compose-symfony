@@ -24,6 +24,12 @@ RUN chmod a+x /usr/local/bin/symfony
 RUN groupadd -g 1000 symfony && \
     useradd -u 1000 -g symfony -m symfony
 
+COPY bin/install-composer /home/symfony/
+RUN chmod a+x /home/symfony/install-composer
+RUN apt-get install -y wget
+RUN /home/symfony/install-composer && \
+    mv composer.phar /usr/local/bin/composer
+
 USER symfony
 
 WORKDIR /var/www
