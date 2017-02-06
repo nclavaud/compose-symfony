@@ -11,7 +11,15 @@ services:
     php:
         build: docker/php
         volumes:
-            - .:/var/www
+            - ./app:/var/www/app
+            - ./bin:/var/www/bin
+            - ./bin:/var/www/composer.json
+            - ./bin:/var/www/composer.lock
+            - ./src:/var/www/src
+            - ./tests:/var/www/tests
+            - ./vendor:/var/www/vendor
+            - ./web:/var/www/web
+            - ./var/bootstrap.php.cache:/var/www/var/bootstrap.php.cache
         env_file:
             - php-variables.env
     db:

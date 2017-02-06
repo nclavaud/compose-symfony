@@ -21,9 +21,11 @@ RUN apt-get update && \
 RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 RUN chmod a+x /usr/local/bin/symfony
 
-RUN groupadd -g 1000 symfony && \
-    useradd -u 1000 -g symfony -m symfony
+RUN mkdir /var/www/var
+RUN mkdir /var/www/var/cache && chown www-data:www-data /var/www/var/cache
+RUN mkdir /var/www/var/logs && chown www-data:www-data /var/www/var/logs
+RUN mkdir /var/www/var/sessions && chown www-data:www-data /var/www/var/sessions
 
-USER symfony
+USER www-data
 
 WORKDIR /var/www
