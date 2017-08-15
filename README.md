@@ -5,7 +5,7 @@ Run Symfony3 in seconds!
 ## Features
 
 This Symfony starter-kit is bundled with:
-- Symfony 3.2
+- Symfony 3.3
 - nginx
 - PHP-fpm 7.1
 - PostgreSQL 9.6
