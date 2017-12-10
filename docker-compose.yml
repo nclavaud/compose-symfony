@@ -31,7 +31,7 @@ services:
             # default database user name for psql client
             PGUSER: symfony
     composer:
-        image: composer/composer
+        image: composer
         volumes:
             - .:/app
         env_file:
