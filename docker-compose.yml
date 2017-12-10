@@ -13,8 +13,8 @@ services:
         volumes:
             - ./app:/var/www/app
             - ./bin:/var/www/bin
-            - ./bin:/var/www/composer.json
-            - ./bin:/var/www/composer.lock
+            - ./composer.json:/var/www/composer.json
+            - ./composer.lock:/var/www/composer.lock
             - ./src:/var/www/src
             - ./tests:/var/www/tests
             - ./vendor:/var/www/vendor
