@@ -23,7 +23,7 @@ services:
         env_file:
             - php-variables.env
     db:
-        image: postgres:9.6.4
+        image: postgres:10.1
         environment:
             POSTGRES_USER: symfony
             POSTGRES_PASSWORD: symfony
